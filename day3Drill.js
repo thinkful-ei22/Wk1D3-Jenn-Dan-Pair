@@ -262,3 +262,57 @@ function titles(arr){
   }
 }
 console.log(titles(workers));
+
+
+//Properties that aren't there
+
+//   Adjust the message so that people with no boss display "${title} ${name} doesn't report to anybody." - for example, Founder John doesn't report to anybody.
+
+obj1.boss = 'Sandra';
+obj2.boss = 'Sandra';
+
+// Change the iteration to print out messages in this format: "${title} ${name} reports to ${boss}.".For example: Junior Engineer Bob reports to Fred..
+function printBoss(arr){
+  for (let i = 0; i < arr.length; i++) {
+    if ('boss' in arr[i]) {
+      console.log(`${arr[i].jobTitle} ${arr[i].name} reports to  ${arr[i].boss}`);
+    } 
+    // Expand on the previous example by adding a boss property to everyone except the owner of the company.
+    else {
+      console.log(`${arr[i].jobTitle} ${arr[i].name} doesn't report to anybody`);
+    }
+  }
+}
+
+console.log(printBoss(workers));
+
+
+//Cracking the code
+
+
+// Redo your Cracking the Code problem from String Drills but this time use an object as your cipher.Additionally, create a decodeWords function that utilizes your decode function to accept a single string of words, and then return the fully decoded message as a string.
+
+const cipher = {
+  a: 1,
+  b: 2,
+  c: 3,
+  d: 4
+};
+
+//cycle
+function decode(word) {
+  //take the first char
+  let firstChar = word[0];
+  if (firstChar in cipher) {
+    return word[cipher[firstChar]];
+  }
+  return ' ';
+}
+
+function decodeWords (str) {
+  let arr = str.split(' ');
+  return arr.map(decode).join('');
+}
+
+console.log(decode('cycle'));
+console.log(decodeWords('craft block argon meter bells brown croon droop'));
