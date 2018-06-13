@@ -81,3 +81,28 @@ function makeStudentReports(data) {
 }
 
 console.log(makeStudentReports(testData));
+
+//summer school
+let ourStudents = [
+  {
+    name: 'Tim',
+    status: 'Current student',
+    course: 'Biology'
+  },
+  {
+    name: 'Sue',
+    status: 'Withdrawn',
+    course: 'Mathematics'
+  }
+];
+function enrollInSummerSchool(students){
+  let newArray = [];
+  for (let i=0;i<students.length;i++){
+    students[i].status = 'In Summer School';
+    newArray.push(students[i]);
+  }
+  return newArray;
+
+
+}
+console.log(enrollInSummerSchool(ourStudents));
