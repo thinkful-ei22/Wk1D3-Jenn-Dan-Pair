@@ -220,3 +220,45 @@ let myObj = {
 for (let key in myObj) {
   console.log(`${key} -- ${myObj[key]}`);
 }
+
+//Arrays in objects
+// Create an object with a property called meals which is an array of strings: 'breakfast', 'second breakfast', 'elevenses', 'lunch', 'afternoon tea', 'dinner', 'supper'.
+// Use console.log to show the name of a hobbit's fourth meal of the day.
+// Don't forget that humans and hobbits count from 1, but computers count from 0.
+
+const foodObj = {
+  meals:['breakfast',
+    'second breakfast', 
+    'elevenses', 
+    'lunch', 
+    'afternoon tea', 
+    'dinner', 
+    'supper'],
+};
+
+console.log(foodObj.meals[3]);
+
+// Arrays of objects
+// Create 3-5 objects, each with a name and a jobTitle. Use people you know, or characters from fiction, or your own inventions.
+
+let obj1={
+  name:'Bob',
+  jobTitle: 'Teacher'
+};
+let obj2={
+  name:'Anne',
+  jobTitle: 'Chef'
+};
+let obj3={
+  name:'Sandra',
+  jobTitle: 'Dermatologist'
+};
+// Store these objects in an array.
+let workers = [obj1,obj2,obj3];
+// Iterate over the array and use console.log to show each person's job title and name
+function titles(arr){
+  for(let i=0;i<arr.length;i++){
+    console.log(`${arr[i].name}: ${arr[i].jobTitle}`);
+  }
+}
+console.log(titles(workers));
