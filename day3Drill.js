@@ -102,7 +102,28 @@ function enrollInSummerSchool(students){
     newArray.push(students[i]);
   }
   return newArray;
-
-
 }
 console.log(enrollInSummerSchool(ourStudents));
+
+
+//Find by id
+
+//const data = [{ id: 1, foo: 'bar' }, { id: 2, foo: 'bizz' }];
+//findById(data, 2) // should return {id: 2, foo: 'bizz'}
+
+const scratchData = [
+  { id: 22, foo: 'bar' },
+  { id: 28, foo: 'bizz' },
+  { id: 19, foo: 'bazz' },
+];
+
+function findById(items, idNum) {
+  // your code here
+  for (let i = 0; i < items.length; i++){
+    if (items[i].id === idNum) {
+      return items[i];
+    } 
+  }
+}
+
+console.log(findById(scratchData, 28));
