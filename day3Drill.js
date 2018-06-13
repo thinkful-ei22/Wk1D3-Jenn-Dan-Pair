@@ -1,132 +1,132 @@
 'use strict';
-// //Create Object
-// function createMyObject (){
-//   return {
-//     foo: 'bar',
-//     answerToUniverse: 42,
-//     'olly olly': 'oxen free',
-//     sayHello: function (){
-//       return 'hello';
-//     }
-//   };
-// }
+//Create Object
+function createMyObject (){
+  return {
+    foo: 'bar',
+    answerToUniverse: 42,
+    'olly olly': 'oxen free',
+    sayHello: function (){
+      return 'hello';
+    }
+  };
+}
 
-// console.log(createMyObject());
+console.log(createMyObject());
 
-// //Update Object
+//Update Object
 
-// let obj = {};
-// function updateObject(obj) {
+let obj = {};
+function updateObject(obj) {
 
-//   obj.foo = 'foo';
-//   obj.bar = 'bar';
-//   obj.bizz = 'bizz';
-//   obj.bang = 'bang';
-//   return obj;
-// }
+  obj.foo = 'foo';
+  obj.bar = 'bar';
+  obj.bizz = 'bizz';
+  obj.bang = 'bang';
+  return obj;
+}
 
-// console.log(updateObject(obj));
-
-
-// //Self-reference
-
-// function personMaker() {
-//   var person = {
-//     firstName: 'Paul',
-//     lastName: 'Jones',
-//     // replace `null` with a function that uses self reference to return
-//     // full name
-//     fullName: function(){
-//       return this.firstName + ' ' + this.lastName;
-//     }
-//   };
-//   return person;
-// }
-
-// console.log(personMaker().fullName());
+console.log(updateObject(obj));
 
 
-// //deleting keys
+//Self-reference
 
-// const sampleObj = {
-//   foo: 'foo',
-//   bar: 'bar',
-//   bizz: 'bizz',
-//   bang: 'bang',
-// };
+function personMaker() {
+  var person = {
+    firstName: 'Paul',
+    lastName: 'Jones',
+    // replace `null` with a function that uses self reference to return
+    // full name
+    fullName: function(){
+      return this.firstName + ' ' + this.lastName;
+    }
+  };
+  return person;
+}
 
-// function keyDeleter(obj) {
-//   delete obj.foo;
-//   delete obj.bar;
-//   return obj;
-// }
-
-// console.log(keyDeleter(sampleObj));
-
-
-// //Make student reports
-
-// const testData = [
-//   { name: 'Jane Doe', grade: 'A' },
-//   { name: 'John Dough', grade: 'B' },
-//   { name: 'Jill Do', grade: 'A' },
-// ];
-
-// function makeStudentReports(data) {
-//   let newArray = [];
-//   for (let i = 0; i < data.length; i++) {
-//     newArray.push(`${data[i].name} : ${data[i].grade}`);
-//   }
-//   return newArray;
-// }
-
-// console.log(makeStudentReports(testData));
-
-// //summer school
-// let ourStudents = [
-//   {
-//     name: 'Tim',
-//     status: 'Current student',
-//     course: 'Biology'
-//   },
-//   {
-//     name: 'Sue',
-//     status: 'Withdrawn',
-//     course: 'Mathematics'
-//   }
-// ];
-// function enrollInSummerSchool(students){
-//   let newArray = [];
-//   for (let i=0;i<students.length;i++){
-//     students[i].status = 'In Summer School';
-//     newArray.push(students[i]);
-//   }
-//   return newArray;
-// }
-// console.log(enrollInSummerSchool(ourStudents));
+console.log(personMaker().fullName());
 
 
-// //Find by id
+//deleting keys
 
-// //const data = [{ id: 1, foo: 'bar' }, { id: 2, foo: 'bizz' }];
-// //findById(data, 2) // should return {id: 2, foo: 'bizz'}
+const sampleObj = {
+  foo: 'foo',
+  bar: 'bar',
+  bizz: 'bizz',
+  bang: 'bang',
+};
 
-// const scratchData = [
-//   { id: 22, foo: 'bar' },
-//   { id: 28, foo: 'bizz' },
-//   { id: 19, foo: 'bazz' },
-// ];
+function keyDeleter(obj) {
+  delete obj.foo;
+  delete obj.bar;
+  return obj;
+}
 
-// function findById(items, idNum) {
-//   // your code here
-//   for (let i = 0; i < items.length; i++){
-//     if (items[i].id === idNum) {
-//       return items[i];
-//     } 
-//   }
-// }
+console.log(keyDeleter(sampleObj));
 
-// console.log(findById(scratchData, 28));
+
+//Make student reports
+
+const testData = [
+  { name: 'Jane Doe', grade: 'A' },
+  { name: 'John Dough', grade: 'B' },
+  { name: 'Jill Do', grade: 'A' },
+];
+
+function makeStudentReports(data) {
+  let newArray = [];
+  for (let i = 0; i < data.length; i++) {
+    newArray.push(`${data[i].name} : ${data[i].grade}`);
+  }
+  return newArray;
+}
+
+console.log(makeStudentReports(testData));
+
+//summer school
+let ourStudents = [
+  {
+    name: 'Tim',
+    status: 'Current student',
+    course: 'Biology'
+  },
+  {
+    name: 'Sue',
+    status: 'Withdrawn',
+    course: 'Mathematics'
+  }
+];
+function enrollInSummerSchool(students){
+  let newArray = [];
+  for (let i=0;i<students.length;i++){
+    students[i].status = 'In Summer School';
+    newArray.push(students[i]);
+  }
+  return newArray;
+}
+console.log(enrollInSummerSchool(ourStudents));
+
+
+//Find by id
+
+//const data = [{ id: 1, foo: 'bar' }, { id: 2, foo: 'bizz' }];
+//findById(data, 2) // should return {id: 2, foo: 'bizz'}
+
+const scratchData = [
+  { id: 22, foo: 'bar' },
+  { id: 28, foo: 'bizz' },
+  { id: 19, foo: 'bazz' },
+];
+
+function findById(items, idNum) {
+  // your code here
+  for (let i = 0; i < items.length; i++){
+    if (items[i].id === idNum) {
+      return items[i];
+    } 
+  }
+}
+
+console.log(findById(scratchData, 28));
 
 //validate keys
 
@@ -181,3 +181,42 @@ console.log(validateKeys(objectA, expectedKeys));
 console.log(validateKeys(objectB, expectedKeys));
 console.log(validateKeys(objectC, expectedKeys));
 console.log(validateKeys(objectD, expectedKeys));
+
+
+//Object initializers and methods
+
+//Create an object called loaf with flour and water properties
+let loaf = {
+  flour: 300,
+  water: 210,
+};
+
+//Use console.log to print the flour and water properties
+console.log(loaf.flour);
+console.log(loaf.water);
+
+// Fill in the body of the method to return the hydration of the loaf(the water divided by the flour multiplied by 100).
+loaf.hydration = function(){
+  return (this.water / this.flour) * 100;
+};
+// Call the hydration method and use console.log to print the result.
+console.log(loaf.hydration());
+
+
+// Iterating over an object's properties
+
+// Create an object with five properties: foo, bar, fum, quux, and spam.Give each property a unique value of your choosing.
+// Loop over the object using for ... in
+// Use console.log to show each property name and its associated value.
+
+let myObj = {
+  foo: 'anything',
+  bar: 'anybody',
+  fum: 2,
+  quux: false,
+  spam: 'somebody'
+};
+
+for (let key in myObj) {
+  console.log(`${key} -- ${myObj[key]}`);
+}
