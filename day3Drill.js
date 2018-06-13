@@ -62,3 +62,22 @@ function keyDeleter(obj) {
 }
 
 console.log(keyDeleter(sampleObj));
+
+
+//Make student reports
+
+const testData = [
+  { name: 'Jane Doe', grade: 'A' },
+  { name: 'John Dough', grade: 'B' },
+  { name: 'Jill Do', grade: 'A' },
+];
+
+function makeStudentReports(data) {
+  let newArray = [];
+  for (let i = 0; i < data.length; i++) {
+    newArray.push(`${data[i].name} : ${data[i].grade}`);
+  }
+  return newArray;
+}
+
+console.log(makeStudentReports(testData));
